@@ -3,6 +3,49 @@ import { TriboService } from "./services/TriboService.js";
 import { NacaoService } from "./services/NacaoService.js";
 import { Renderizar_Dados } from "./utils/RenderizarDado.js";
 
+//funcao CLUSTER para controlar o progresso da barra de progresso de cada tribo específica:
+const animacao_progresso = (pontuacao_maxima)=>{
+
+    //acessando todas as barras de progresso existentes pois cada tribo existente:
+    const barras_progresso = window.document.querySelectorAll(".progresso > .barra_progresso");
+    
+    //sabendo que cada tribo possui seus proprios dados entao vamos trabalhar com esses:
+    barras_progresso.forEach((barra_progresso, indice)=>{
+        
+        //acessando o elemento raiz dessa barra de progresso:
+        let tribo = barra_progresso.parentNode.parentNode;
+        let pontuacao_atual = Number(tribo.querySelector(".pontuacao").innerHTML);  
+
+        //calcula a porcentagem ja alcancada a partir da pontuacao atual com base na pontuacao maxima:
+        let pontuacao_alvo = (pontuacao_atual / pontuacao_maxima) * 100;
+
+        //variável local que sera incrementada lentamente como se fosse na animacao original com keyframes CSS3:
+        let progresso_atual = 0;
+
+        //funcao para aplicar o progresso da barra:
+        const animar_barra = ()=>{
+
+            if(progresso_atual < pontuacao_alvo){
+
+                //incrementando 1 ao progresso atual:
+                progresso_atual += 1;
+
+                //avancando com a barra de progresso esses 1 incrementado acima:
+                barra_progresso.style.width = progresso_atual + "%";
+
+                //sincronizando minha animacao completamente com o refresh de 60fps do navegador:
+                requestAnimationFrame(animar_barra);
+            }
+
+        }
+
+        //chamada ao metodo de animar_barra:
+        animar_barra();
+
+    });
+
+};
+
 //funcao para ocultar o painel de navegacao:
 const ocultar_navegacao = (painel)=>{
     //ocultando o painel de navegacao:
@@ -51,6 +94,19 @@ const controle_icone = ()=>{
     }
 }
 
+//funcao para iniciar o script:
+const iniciar_script = ()=>{
+    //chamada ao método para replicar a animcacao da barra de progresso a cada 2 segundos:
+    animacao_progresso(500);
+    
+    //criando o loop que a cada 2 segundos será ativado:
+    setInterval(()=>{
+        //chamada ao método para replicar a animcacao da barra de progresso a cada 2 segundos:
+        animacao_progresso(500);
+    }, 2000);
+
+}
+
 /*ligando os elementos da interface ao javascript via DOM*/
 const conteiner_nacao = window.document.querySelector(".conteiner_nacao");
 const conteiner_tribo = window.document.querySelector(".conteiner_tribos");
@@ -75,3 +131,6 @@ window.addEventListener("resize", controle_icone);
 
 //adicionando um ouvidor de cliques no icone de menu:
 icone_menu.addEventListener("click", controle_navegacao);
+
+//chamada ao método para iniciar a execucao do meu script:
+iniciar_script();

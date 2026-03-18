@@ -417,6 +417,7 @@ footer{
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
 }
 
+/* animacao da barra de progresso com CSS3
 @keyframes barra_progresso{
     from{
         width: 0%;
@@ -425,3 +426,4 @@ footer{
         width: 100%;
     }
 }
+*/
