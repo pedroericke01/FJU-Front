@@ -83,13 +83,13 @@
 @media screen and (orientation: landscape) and (max-width:1024px){
     .conteiner_dados > form{
         width: 70%;
-        height: 80%;
+        height: 90%;
 
         padding: 5px;
         
         gap: 6px;
 
-        background-color: orange;
+        background-color: orangered;
     }
     form > .conteiner_imagem{
         width: 110px;
