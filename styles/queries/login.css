@@ -81,21 +81,26 @@
 
 /* media queries para orientação 'Paisagem' */
 @media screen and (orientation: landscape) and (max-width:1024px){
+    main{
+        width: 100%;
+        /*5% do html e body são para o header e os outros 5 sao para o footer*/
+        height: 110%;
+    }
     .conteiner_dados > form{
         width: 70%;
         height: 90%;
 
         padding: 5px;
         
-        gap: 6px;
+        gap: 8px;
 
-        background-color: orangered;
+        background-color: transparent;
     }
     form > .conteiner_imagem{
-        width: 110px;
-        height: 110px;
+        width: 120px;
+        height: 120px;
     }
     form > input{
-        padding: 6px;
+        padding: 8px;
     }
 }
