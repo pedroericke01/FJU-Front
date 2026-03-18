@@ -87,7 +87,7 @@
 
         padding: 5px;
         
-        gap: 8px;
+        gap: 6px;
 
         background-color: orange;
     }
@@ -96,6 +96,6 @@
         height: 110px;
     }
     form > input{
-        padding: 8px;
+        padding: 6px;
     }
 }
