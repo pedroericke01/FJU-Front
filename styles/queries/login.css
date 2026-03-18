@@ -83,26 +83,17 @@
 @media screen and (orientation: landscape) and (max-width:1024px){
     .conteiner_dados > form{
         width: 70%;
-        height: 90%;
+        height: 80%;
 
         padding: 5px;
         
         gap: 8px;
     }
     form > .conteiner_imagem{
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
     }
     form > input{
         padding: 8px;
-        
-    }
-    form > .controles{
-        width: 83%;
-        
-        gap: 7px;
-    }
-    .controles > input{
-        padding: 7px;
     }
 }
