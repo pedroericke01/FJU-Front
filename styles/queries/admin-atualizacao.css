@@ -75,10 +75,14 @@
 
 /* media queries para orientação 'Paisagem' */
 @media screen and (orientation: landscape) and (max-width:1024px){
-        /*configurando a media querie do header*/
+    /*configurando a media querie do header*/
     header > .logo > a{
         /*houve um aumento de 3px no tamanho do header*/
         font-size: 25px;
+    }
+    main{
+        /*5% do html e body são para o header e os outros 5 sao para o footer*/
+        height: 110%;
     }
 
     .conteiner_dados > form{
