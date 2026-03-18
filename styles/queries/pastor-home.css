@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* device breakpoints: 
+1-telas-menores:min-width:328px, max-width:767px
+2-tablets: min-width:768px, max-width:1024px;
+3-desktops: min-width:1025px, max-width:1880px
+4-telas-maiores: min-width:1881px*/
+
+/* media querie para tablets: */
+@media screen and (min-width:768px){
+    main > .conteiner_dados{
+        gap: 5px;
+    }
+    .conteiner_tabela > table{
+        font-size: 16px;
+    }
+    tbody > tr > td.icones_controle{
+        justify-content: space-around;
+    }
+}
+
+/* media para laptops: */
+@media screen and (min-width:1024px){
+    main > .conteiner_dados{
+        gap: 15px;
+    }
+    .conteiner_dados > form{
+        /*reducao de 5%*/
+        width: 65%; 
+        
+        height: 35%;
+    }
+    .conteiner_tabela{
+        width: 100%;
+        max-height: 60%;
+
+        /*possibilitando a rolagem de scrol lateral da tabela a partir de seu conteúdo interno*/
+        overflow-y: auto;
+    }
+}
+
+/* media para desktops: */
+@media screen and (min-width:1280px){
+    main > .conteiner_dados{
+        gap: 15px;
+    }
+    .conteiner_dados > form{
+        /*reducao de 5%*/
+        width: 65%;    
+    }
+    .conteiner_tabela{
+        width: 100%;
+        max-height: 59%;
+
+        /*possibilitando a rolagem de scrol lateral da tabela a partir de seu conteúdo interno*/
+        overflow-y: auto;
+    }
+}
+
+/* media queries para orientação 'Paisagem' */
+@media screen and (orientation: landscape) and (max-width:1024px){
+    
+    .conteiner_dados > form{
+        /*reducao de 10%*/
+        width: 60%;
+
+        /*aumento de 20%*/
+        height: 55%;
+
+        gap: 8px;
+    }
+
+    form > input{   
+        padding: 6px;
+    }
+
+    .conteiner_tabela{
+        width: 100%;
+
+        /*reducao de 20%*/
+        max-height: 40%;
+    }
+
+}

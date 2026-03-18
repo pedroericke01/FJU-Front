@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/* device breakpoints: 
+1-telas-menores:min-width:328px, max-width:767px
+2-tablets: min-width:768px, max-width:1024px;
+3-desktops: min-width:1025px, max-width:1880px
+4-telas-maiores: min-width:1881px
+*/
+
+/* criando media querie para tablet: */
+@media screen and (min-width:768px){
+    /*configurando a media querie do header*/
+    header > .logo > a{
+        /*houve um aumento de 3px no tamanho do header*/
+        font-size: 25px;
+    }
+
+    /*configurando a media querie do main*/
+    main > .conteiner_dados{
+        gap: 10px;
+    }
+    .conteiner_dados > h2{        
+        padding: 10px;
+
+        background-color: transparent;
+    }
+
+    .conteiner_dados > .conteiner_tribos{    
+        /*houve um aumento, agora 95px no espacamento entre as tribos*/
+        gap: 65px;
+
+        background-color: transparent;
+    }
+    .conteiner_tribos > .tribo{
+        /*houve um aumento de 10px no flex basis*/
+        flex-basis: 150px;
+
+        background-color: transparent;
+    }
+}
+
+/* média para laptops: */
+@media screen and (min-width:1024px){
+
+    /*configurando a media querie do header*/
+    header > .logo > a{
+        /*houve mais um aumento de 3px no tamanho da fonte do header*/
+        font-size: 28px;
+    }
+
+    /*configurando a media querie do main*/
+    main > .conteiner_dados{
+        gap: 25px;
+    }
+    .conteiner_dados > .conteiner_tribos{  
+        height: 85%;
+
+        /*houve uma diminuicao, agora 95px no espacamento entre as tribos*/
+        gap: 95px;
+
+        background-color: transparent;
+    }
+    .conteiner_tribos > .tribo{
+        /*houve um aumento de 10px no flex basis*/
+        flex-basis: 150px;
+
+        background-color: transparent;
+    }
+
+}
+
+/* media para desktops */
+@media screen and (min-width:1280px){
+    /*configurando a media querie do header*/
+    header > .logo > a{
+        /*houve mais um aumento de 3px no tamanho da fonte do header*/
+        font-size: 28px;
+    }
+
+    /*configurando a media querie do main*/
+    main > .conteiner_dados{
+        gap: 0px;
+    }
+    .conteiner_dados > h2{
+        /*houve um aumento de 10% no padding desse elemento*/
+        padding: 20px;
+    }
+    .conteiner_dados > .conteiner_tribos{  
+        height: 85%;
+
+        /*houve uma diminuicao, agora 35px no espacamento entre as tribos*/
+        gap: 35px;
+
+        background-color: transparent;
+    }
+    .conteiner_tribos > .tribo{
+        /*houve um aumento de 10px no flex basis*/
+        flex-basis: 150px;
+
+        background-color: transparent;
+    }
+
+}
+

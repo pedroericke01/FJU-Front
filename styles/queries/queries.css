@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* device breakpoints: 
+1-telas-menores:min-width:328px, max-width:767px
+2-tablets: min-width:768px, max-width:1024px;
+
+3-desktops: min-width:1025px, max-width:1880px
+4-telas-maiores: min-width:1881px*/
+
+
+/* importação da fonte MontSerrat do google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor0:#F2F2F2;
+    --cor1:#F20505;
+    --cor2:#A60303;
+    --cor3:#011C40;
+
+    --fonte_padrao:Arial, Helvetica, sans-serif;
+    --fonte_destaque:"Montserrat", sans-serif;;
+}
+
+/* media para tablets: */
+@media screen and (min-width:768px){
+
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        
+        gap: 0px;
+    }
+    header > nav{
+        width: auto;
+
+        display: flex;
+
+        flex-direction: row;
+        justify-content: space-around;
+        
+        gap: 15px;
+    }
+    header > nav > a{
+        height: 20px;
+        
+        padding: 5px;
+
+        border-color: transparent;
+        background-color:transparent;
+    }
+    header > nav > a:hover{
+        border-color: rgba(0, 0, 0, 0.200);
+        background-color: rgba(0, 0, 0, 0.200);
+    }
+    header > span.material-symbols-outlined{
+        display: none;
+    }
+    
+    .conteiner_nacao > .nacao{
+        flex-basis: 130px;
+        height: 130px;
+    }
+    
+    .conteiner_dados > .conteiner_tribos{
+        height: 50%;
+        
+        gap: 65px;
+
+        background-color: transparent;
+    }
+    .conteiner_tribos > .tribo{
+        flex-basis: 150px;
+        background-color: transparent;
+    }
+
+}
+
+/* media para laptops: */
+@media screen and (min-width:1024px){
+    .conteiner_dados > .conteiner_tribos{
+        gap: 70px;
+    }
+}
+
+/* media para desktops */
+@media screen and (min-width:1280px){
+    .conteiner_dados > .conteiner_tribos{
+        gap: 25px;
+    }
+    .conteiner_tribos > .tribo{
+        flex-basis: 160px;
+    }
+}
+
+/* media queries para orientação 'Paisagem' */
+@media screen and (orientation: landscape) and (max-width:1024px){
+    .conteiner_nacao > .nacao{
+        flex-basis: 120px;
+        height: 120px;
+    }
+    
+    .conteiner_dados > .conteiner_tribos{
+        height: 50%;
+        
+        gap: 10px;
+
+        background-color: transparent;
+    }
+    .conteiner_tribos > .tribo{
+        flex-basis: 150px;
+        background-color: transparent;
+    }
+
+}

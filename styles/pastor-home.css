@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+/* importação da fonte MontSerrat do google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor0:#F2F2F2;
+    --cor1:#F20505;
+    --cor2:#A60303;
+    --cor3:#011C40;
+
+    --fonte_padrao:Arial, Helvetica, sans-serif;
+    --fonte_destaque:"Montserrat", sans-serif;;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html,body{
+    width: auto;
+    height: 100%;
+
+    font-family: var(--fonte_padrao);
+    font-size: 16px;
+    color: var(--cor3);
+
+    background-color:var(--cor3);
+
+    background-color: var(--cor3)
+}
+
+header{
+    width: 100%;
+    height: auto;
+    
+    padding: 10px 0px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;    
+    justify-content: space-around;    
+    align-items: center;
+
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+
+}
+header > .logo{
+    width: auto;
+    height: auto;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+}
+header > .logo > a{
+    text-decoration: none;
+
+    font-family: var(--fonte_destaque);
+    font-weight: bolder;
+    font-size: 20px;
+    color:var(--cor0);
+}
+header > .reiniciar{
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 5px;
+    border-color: transparent;
+    
+    background-color: transparent;
+}
+.reiniciar > input{
+    padding: 3px;
+
+    font-family: var(--fonte_padrao);
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--cor0);
+
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 5px;
+    border-color: transparent;
+    
+    cursor: pointer;
+    
+    background-color: transparent;
+
+    transition: all .3s ease-in-out;
+}
+.reiniciar > input:hover{
+    border-color: var(--cor0);
+    
+    background-color: #f2f2f27a;
+    box-shadow: 0px 0px 3px var(--cor0);
+}
+
+main{
+    width: 100%;
+    /*5% do html e body são para o header e os outros 5 sao para o footer*/
+    height: 95%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color:var(--cor3);
+}
+main > .conteiner_dados{
+    width: 95%;
+    /*ocupa 100% da altura do conteiner pai*/
+    height: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    gap: 10px;
+
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-color: var(--cor0);
+
+    background-color: var(--cor0);
+
+    overflow: hidden;
+}
+.conteiner_dados > h2{
+    margin-top: 8px;
+
+    height: 5%;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.conteiner_dados > form{
+    width: 70%;
+    height: 30%;
+
+    padding: 5px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 10px;
+}
+form > h3{
+    align-self: center;
+}
+form > input{   
+    padding: 10px;
+    
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: transparent;
+    
+    cursor: pointer;
+    
+    color: black;
+    background-color: gainsboro;
+    
+    /*configurando a transicao de estados estre os elementos*/
+    transition: all .3s linear;
+}
+form > input[type="submit"]{
+    color: var(--cor0);
+    background-color: var(--cor3);
+}
+
+/*mudanca de estado do botao 'submit'*/
+form > input[type="submit"]:hover{
+    box-shadow: 0px 0px 3px var(--cor3);
+}
+
+/*transicao para o momento que um input estiver em foco pelo usuário*/
+input:focus{
+    outline: 0;
+    box-shadow: 0px 0px 5px var(--cor3);
+}
+
+.conteiner_tabela{
+    width: 100%;
+    max-height: 64%;
+
+    /*possibilitando a rolagem de scrol lateral da tabela a partir de seu conteúdo interno*/
+    overflow-y: auto;
+}
+
+.conteiner_tabela > table{
+    width: 100%;
+    height: auto;
+
+    font-family: var(--fonte_padrao);
+    font-size: 12px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    
+    border-collapse: collapse;
+    
+    color: black;
+    background-color: var(--cor0);
+}
+
+/*a primeira linha do cabecalho será grudada fixamente no topo da tabela*/
+table > thead > tr{
+    position: sticky;
+    top: 0;
+    
+    z-index: 10;
+
+    text-align: center;
+
+    color: var(--cor0);
+    background-color: var(--cor3);
+}
+
+/*no caso de adicionar bordas ou padding no conteúdo do cabecalho, será adicionado nessa estilizacao*/
+table > thead > tr > th{
+    padding: 10px;
+}
+
+table > tbody{
+    background-color: transparent;
+}
+
+/*estilizando os registros da tabela*/
+table > tbody > tr{
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+
+    cursor: pointer;
+
+    background-color: transparent;
+
+    transition: all .3s linear;
+}
+
+table > tbody > tr:hover{
+    background-color: rgba(0, 0, 0, 0.085);
+}
+
+/*no caso de adicionar bordas em cada coluna do registro deve ser estilizada em: tbody > tr > td*/
+tbody > tr > td{
+    padding: 5px;
+}
+
+tbody > tr > td.icones_controle{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+tbody > tr > td.icones_controle > .material-symbols-outlined{
+    padding: 2px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    border-color: transparent;
+
+    transition: all .3s linear;
+}
+
+tbody > tr > td.icones_controle > .material-symbols-outlined:hover{
+    border-color: var(--cor3);
+
+    background-color: rgba(255, 255, 255, 0.22);
+
+    box-shadow:inset 0px 0px 5px var(--cor3);
+}
+
+/*classe que adicion o efeito blur() para ocultar dados sensíveis dos registros*/
+tbody > tr .ocultar{
+   filter: blur(10px); 
+}
+
+footer{
+    width: 100%;
+    height: 30px;
+
+    margin-top: 10px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--fonte_destaque);
+    font-weight: bolder;
+    font-size: 11px;
+    color: var(--cor0);
+    
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+}

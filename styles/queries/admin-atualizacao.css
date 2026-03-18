@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/* device breakpoints: 
+1-telas-menores:min-width:328px, max-width:767px
+2-tablets: min-width:768px, max-width:1024px;
+
+3-desktops: min-width:1025px, max-width:1880px
+4-telas-maiores: min-width:1881px*/
+
+/* media querie para tablets: */
+@media screen and (min-width:768px){
+
+    /*configurando a media querie do header*/
+    header > .logo > a{
+        /*houve um aumento de 3px no tamanho do header*/
+        font-size: 25px;
+    }
+
+    .conteiner_dados > form{
+        padding: 5px;
+        gap: 18px;
+    }
+
+    form > .conteiner_imagem{
+        width: 200px;
+        height: 200px;
+    }
+
+    form > .controles{
+        width: 84%;
+        
+        gap: 7px;
+    }
+
+}
+
+/* media para laptops: */
+@media screen and (min-width:1024px){
+    /*configurando a media querie do header*/
+    header > .logo > a{
+        /*houve mais um aumento de 3px no tamanho da fonte do header*/
+        font-size: 28px;
+    }
+
+    .conteiner_dados > form{
+        width: 70%;
+        
+        height: 85%;
+        padding: 5px;
+        
+        gap: 18px;
+    }
+
+    form > .conteiner_imagem{
+        width: 210px;
+        height: 200px;
+    }
+
+    form > .controles{
+        width: 83%;
+        
+        gap: 7px;
+    }
+
+}
+
+/* media para desktops: */
+@media screen and (min-width:1280px){
+
+    form > .conteiner_imagem{
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* media queries para orientação 'Paisagem' */
+@media screen and (orientation: landscape) and (max-width:1024px){
+        /*configurando a media querie do header*/
+    header > .logo > a{
+        /*houve um aumento de 3px no tamanho do header*/
+        font-size: 25px;
+    }
+
+    .conteiner_dados > form{
+        height: 83%;
+        padding: 5px;
+
+        gap: 7px;
+    }
+
+    form > input{
+        padding: 7px;
+    }
+
+    form > .conteiner_imagem{
+        width: 120px;
+        height: 100px;
+    }
+
+    form > .controles{
+        width: 84%;
+        
+        gap: 6px;
+    }
+    .controles > input{
+        padding: 6px;
+    }
+
+}

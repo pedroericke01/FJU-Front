@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icon/icon-nova/favicon.ico" type="image/x-icon">
+    
+    <!-- importando a api de icones do google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    
+    <!-- chamada as media queries:-->
+    <link rel="stylesheet" href="../styles/pastor-home.css" media="all">
+    <link rel="stylesheet" href="../styles/queries/pastor-home.css">
+    
+    <!-- chamada ao javascript:-->
+    <script type="module" src="../scripts/pastor-home.js" defer></script>
+
+    <title>FJU Macaé</title>
+</head>
+<body>
+    
+    <header>
+
+        <div class="logo">
+            <a href="login.html">Aberto das tribos</a>
+        </div>
+
+        <div class="reiniciar">
+            <input type="button" value="Reiniciar Rally">
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="conteiner_dados">
+
+            <h2>Dados de administradores</h2>
+
+            <form action="" method="get" autocomplete="off">
+                
+                <h3>Criar novo Administrador</h3>
+
+                <input type="email" name="email" id="email" maxlength="125" placeholder="Insira o email">
+                <input type="password" name="senha" id="senha" maxlength="10" placeholder="Insira a senha">
+                <input type="text" name="cargo" id="cargo" maxlength="125" placeholder="Insira o cargo">
+
+                <input type="submit" value="Criar" id="criar">
+
+            </form>
+
+            <div class="conteiner_tabela">
+
+                <table>
+                
+                    <thead>
+
+                        <tr>
+                            <th scope="col">Email</th>
+                            <th scope="col">Senha</th>
+                            <th scope="col">Controle</th>
+                        </tr>
+
+                    </thead>
+                
+                    <tbody>
+                        <!--os registros serão criados dinamicamente-->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+    
+    <footer>
+        <p>A <strong>FJU</strong> é o lugar onde todos os jovens deveriam estar!</p>
+    </footer>
+
+</body>
+</html>

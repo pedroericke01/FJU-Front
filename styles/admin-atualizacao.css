@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+/* importação da fonte MontSerrat do google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor0:#F2F2F2;
+    --cor1:#F20505;
+    --cor2:#A60303;
+    --cor3:#011C40;
+
+    --fonte_padrao:Arial, Helvetica, sans-serif;
+    --fonte_destaque:"Montserrat", sans-serif;;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html,body{
+    width: auto;
+    height: 100%;
+
+    font-family: var(--fonte_padrao);
+    font-size: 16px;
+    color: var(--cor3);
+
+    background-color:var(--cor3);
+
+    background-color: var(--cor3)
+}
+
+
+header{
+    width: 100%;
+    height: auto;
+    
+    padding: 10px 0px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;    
+    justify-content: space-around;    
+    align-items: center;
+
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+
+}
+header > .logo{
+    width: auto;
+    height: auto;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+}
+header > .logo > a{
+    text-decoration: none;
+
+    font-family: var(--fonte_destaque);
+    font-weight: bolder;
+    font-size: 20px;
+    color:var(--cor0);
+}
+header > .reiniciar{
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 5px;
+    border-color: transparent;
+    
+    background-color: transparent;
+}
+.reiniciar > input{
+    padding: 3px;
+
+    font-family: var(--fonte_padrao);
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--cor0);
+
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 5px;
+    border-color: transparent;
+    
+    cursor: pointer;
+    
+    background-color: transparent;
+
+    transition: all .3s ease-in-out;
+}
+.reiniciar > input:hover{
+    border-color: var(--cor0);
+    
+    background-color: #f2f2f27a;
+    box-shadow: 0px 0px 3px var(--cor0);
+}
+
+main{
+    width: 100%;
+    /*5% do html e body são para o header e os outros 5 sao para o footer*/
+    height: 95%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color:var(--cor3);
+}
+main > .conteiner_dados{
+    width: 90%;
+    /*ocupa 100% da altura do conteiner pai*/
+    height: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    gap: 5px;
+
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-color: var(--cor0);
+
+    background-color: var(--cor0);
+
+    overflow: hidden;
+}
+.conteiner_dados > h2{
+    width: auto;
+    height: 5%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--fonte_destaque);
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--cor3);
+    
+    padding: 10px;
+
+    background-color: transparent;
+}
+
+.conteiner_dados > form{
+    width: 80%;
+    height: 80%;
+
+    padding: 5px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    
+    gap: 14px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    border-color: transparent;
+    
+    /*configurando o scrol lateral quando necessário*/
+    overflow: auto;
+    
+    background-color: rgba(0, 0, 0, 0.078);
+}
+
+form > .conteiner_imagem{
+    /*configurando o alinhamento centralizado desse flex-item*/
+    align-self: center;
+
+    width: 150px;
+    height: 150px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-style: outset;
+    border-width: 2px;
+    border-color: transparent;
+    border-radius: 10px;
+
+    background-image: linear-gradient(to right, #F20505, #F2F2F2, #011C40);
+
+    animation: bordaAnimada 5s infinite alternate;
+}
+.conteiner_imagem > img{
+    width: 100%;
+    height: 100%;
+    
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 20px;
+    border-color: transparent;
+}
+
+form > input{
+    align-self: center;
+
+    width: 80%;
+    height: auto;
+
+    padding: 10px;
+    
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: transparent;
+    
+    background-color: var(--cor0);
+    
+    /*configurando a transicao de estados estre os elementos*/
+    transition: all .2s linear;
+}
+form > .controles{
+    align-self: center;
+
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    
+    gap: 7px;
+
+    background-color: transparent;
+}
+.controles > input{
+    padding: 9px;
+
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: var(--cor3);
+    
+    font-family: var(--fonte_padrao);
+    font-weight: normal;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    color:var(--cor3);
+    background-color: transparent;
+    
+    /*configurando a transicao de estados entre os elementos:*/
+    transition: all .3s linear;
+}
+
+.controles > input[type="submit"]{
+    border-color: chartreuse;
+    background-color: chartreuse;
+}
+
+/*mudanca de estado do botao 'submit'*/
+.controles > input[type="submit"]:hover{
+    box-shadow: 0px 1px 3px var(--cor3);
+}
+
+/*mudanca de estado do botao 'cancelar'*/
+.controles > input[type="button"]:hover{
+    border-color: var(--cor1);
+    background-color: var(--cor1);
+    box-shadow: 0px 0px 2px var(--cor1);
+}
+
+/*transicao para o momento que um input estiver em foco pelo usuário*/
+input:focus{
+    outline: 0;
+    box-shadow: 0px 0px 5px var(--cor3);
+}
+
+footer{
+    width: 100%;
+    height: 30px;
+
+    margin-top: 10px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--fonte_destaque);
+    font-weight: bolder;
+    font-size: 11px;
+    color: var(--cor0);
+    
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+}
+
+/*configurando a animacao da borda animada*/
+@keyframes bordaAnimada {
+    0%{
+        border-color: var(--cor3);
+        box-shadow: 0px 0px 3px var(--cor3);
+    }
+    25%{
+        border-color: var(--cor0);
+        box-shadow: 0px 0px 3px var(--cor0);
+    }
+    50% {
+        border-color: var(--cor1);
+        box-shadow: 0px 0px 2px var(--cor1);
+    }
+    75%{
+        border-color: var(--cor0);
+        box-shadow: 0px 0px 3px var(--cor0);
+    }
+    100% {
+        border-color: var(--cor3);
+        box-shadow: 0px 0px 3px var(--cor3);
+    }
+}

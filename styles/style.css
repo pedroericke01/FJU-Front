@@ -1,0 +1,427 @@
+@charset "UTF-8";
+
+/* importação da fonte MontSerrat do google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor0:#F2F2F2;
+    --cor1:#F20505;
+    --cor2:#A60303;
+    --cor3:#011C40;
+
+    --fonte_padrao:Arial, Helvetica, sans-serif;
+    --fonte_destaque:"Montserrat", sans-serif;;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html,body{
+    width: auto;
+    height: 100%;
+
+    font-family: var(--fonte_padrao);
+    font-size: 16px;
+    color: var(--cor3);
+
+    background-color:var(--cor3);
+
+    background-color: var(--cor3)
+}
+header{
+    width: 100%;
+    height: auto;
+    
+    padding: 10px 0px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;    
+    justify-content: space-around;    
+    align-items: center;
+    
+    gap: 10px;
+
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+
+}
+header > .logo{
+    width: auto;
+    height: auto;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header > .logo > a{
+    font-family: var(--fonte_destaque);
+    font-weight: bolder;
+    font-size: 32px;
+    color:var(--cor0);
+    
+    text-decoration: none;
+}
+header > nav{
+    width: 90%;
+    height: auto;
+
+    /*o painel de navegacao será exibido quando o usuário clicar no ícone*/
+    display: none;
+
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    
+    /*haverá um espacamento de 10px entre os flex-itens*/
+    gap: 10px;
+
+    background-color: transparent;
+}
+nav > a{
+    /*o text underline nao vai existir nos links atuais*/
+    text-decoration: none;
+
+    width: auto;
+    height: 30px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: var(--cor0);
+
+    color: white;
+    background-color:var(--cor3);    
+        
+    /*configurando a mudanca de transicao de estados nesse elemento*/
+    transition: all .3s linear;
+}
+/*mudanca de estado no momento que o usuário passar o mouse sobre os links*/
+header > nav > a:hover{
+    background-color: #013170;
+}
+header > span.material-symbols-outlined{
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 5px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    border-color: var(--cor0);
+    
+    cursor: pointer;
+
+    color: var(--cor0);
+    
+    font-family: 32px;
+
+    background-color: var(--cor3);
+    
+    /*configurando a transicao da mudanca de estado desse elemento*/
+    transition: all .3s linear;
+}
+/*mudanca de estado do icone*/
+span.material-symbols-outlined:hover{
+    box-shadow: 0px 0px 3px var(--cor0);
+}
+
+main{
+    width: 100%;
+    /*5% do html e body são para o header e os outros 5 sao para o footer*/
+    height: 95%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color:var(--cor3);
+}
+
+
+main > .conteiner_dados{
+    width: 90%;
+    /*ocupa 100% da altura do conteiner pai*/
+    height: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    gap: 5px;
+
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-color: var(--cor0);
+
+    background-color: var(--cor0);
+
+    overflow: hidden;
+}
+.conteiner_dados > h2{
+    width: auto;
+    height: 5%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--fonte_destaque);
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--cor3);
+    
+    padding: 10px;
+
+    background-color: transparent;
+}
+
+
+.conteiner_dados > .conteiner_nacao{
+    width: 100%;
+    height: 45%;
+
+    padding: 5px 0px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*alinhamento dos flex-itens empacotados no momento que houver quebra do fluxo de layout*/
+    align-content: stretch;
+
+    gap: 40px;
+
+    background-image: linear-gradient(to right, #F20505, #F2F2F2, #011C40);
+
+}
+.conteiner_nacao > .nacao{
+    flex-basis: 120px;
+    height: 120px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    border-style:outset;
+    border-width: 1px;
+    border-radius: 30px;
+    border-color: var(--cor3);
+
+    background-color: var(--cor3);
+    box-shadow: 0px 0px 3px var(--cor3);
+}
+.nacao > .conteiner_imagem{    
+    width: 90px;
+    height: 90px;
+
+    background-color: transparent;
+}
+.conteiner_imagem > img{
+    width: 100%;
+    height: 100%;
+}
+.nacao > .conteiner_progresso{
+    width: auto;
+    height: auto;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--fonte_padrao);
+    font-size: 16px;
+    color: white;
+    font-weight: bolder;
+    
+    background-color: transparent;
+}
+
+
+
+.conteiner_dados > .conteiner_tribos{
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*os flex-itens empacotados será esticados*/
+    align-content: stretch;
+    
+    gap: 5px;
+    
+    /*configurando o scrol lateral quando necessário*/
+    overflow: auto;
+    
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-color: transparent;
+
+    background-color: transparent;
+}
+.conteiner_tribos > .tribo{
+    flex-basis: 140px;
+    height: auto;
+
+    padding: 5px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: transparent;
+}
+.tribo > h3{
+    align-self: flex-start;
+
+    font-family: var(--fonte_destaque);
+    font-size: 16px;
+    text-align: center;
+    
+    margin-bottom: 8px;
+
+    background-color: transparent;
+}
+.tribo > .progresso{
+    width: 90%;
+    height: 20px;
+    
+    border-style: outset;
+    border-width: 1px;
+    border-radius:20px;
+    border-color: transparent;
+
+    position: relative;
+
+    background-color: rgb(48, 47, 47);
+}
+.progresso > .barra_progresso{
+    width:0%;
+    height: 100%;
+
+    border-style: outset;
+    border-width: 0px;
+    border-radius:20px;
+    border-color: transparent;
+    
+    background-color: rgb(133, 208, 21);
+    
+    position: relative;
+
+    /*configurando a animacao da barra de progresso*/
+    animation-name: barra_progresso;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.barra_progresso > .conteiner_imagem{
+    /*a posicao da imagem est;a absoluta acima dos demais elementos*/
+    position: absolute;
+    /*posicionando a imagem com base no eixo Y*/
+    top: -10px;
+    /*posicionando a imagem com base no eixoX*/
+    right: -20px;
+
+    /*configurando para a imagem acompanhar a animacao de progresso inteligente*/
+    left: auto;
+
+    width: 45px;
+    height: 40px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+}
+.barra_progresso > .conteiner_imagem > img{
+    width: 100%;
+    height: 100%;
+}
+.tribo > .pontuacao{
+    width: 50%;
+    height: auto;
+    
+    font-family: var(--fonte_padrao);
+    font-size: 16px;
+    text-align: center;
+
+    padding-top: 6px;
+    padding-bottom: 3px;
+
+    border-style: outset;
+    border-width: 1px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-color: var(--cor3);
+    
+    color: var(--cor0);
+    background-color: var(--cor2);
+}
+
+footer{
+    width: 100%;
+    height: 30px;
+
+    margin-top: 10px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--fonte_destaque);
+    font-weight: bolder;
+    font-size: 11px;
+    color: var(--cor0);
+    
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+}
+
+@keyframes barra_progresso{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}

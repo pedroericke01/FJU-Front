@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../icon/icon-nova/favicon.ico" type="image/x-icon">
+    
+    <!-- chamada as media queries:-->
+    <link rel="stylesheet" href="../styles/admin-atualizacao.css" media="all">
+    <link rel="stylesheet" href="../styles/queries/admin-atualizacao.css">
+    
+    <!-- chamada ao javascript:-->
+    <script type="module" src="../scripts/admin-atualizacao.js" defer></script>
+
+    <title>FJU Macaé</title>    
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <a href="admin-home.html">Aberto das tribos</a>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="conteiner_dados">
+
+            <h2>Painel de Atualizacao</h2>
+            
+            <form action="" method="get">
+                
+                <div class="conteiner_imagem">
+                    <img src="../images/imagens-tribos/asser.png" alt="asser">
+                </div>
+
+                <input type="text" id="nome_tribo" placeholder="Nome: Asser" disabled>
+                <input type="text" id="pontuacao_atual" placeholder="Pontuacao Atual: 500" disabled>
+                
+                <input type="number" id="nova_pontuacao" placeholder="Insira a nova pontuacao" min="0" max="9999" required>
+
+                
+                <div class="controles">
+                    <input type="submit" value="Atualizar">
+                    <input type="button" value="Cancelar" id="cancelar">
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+    
+    <footer>
+        <p>A <strong>FJU</strong> é o lugar onde todos os jovens deveriam estar!</p>
+    </footer>
+
+</body>
+</html>

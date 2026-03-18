@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/* importação da fonte MontSerrat do google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor0:#F2F2F2;
+    --cor1:#F20505;
+    --cor2:#A60303;
+    --cor3:#011C40;
+
+    --fonte_padrao:Arial, Helvetica, sans-serif;
+    --fonte_destaque:"Montserrat", sans-serif;;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html,body{
+    width: auto;
+    height: 100%;
+
+    font-family: var(--fonte_padrao);
+    font-size: 16px;
+    color: var(--cor3);
+
+    background-color:var(--cor3);
+
+    background-color: var(--cor3)
+}
+
+header{
+    width: 100%;
+    height: auto;
+    
+    padding: 10px 0px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;    
+    justify-content: space-around;    
+    align-items: center;
+
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+
+}
+header > .logo{
+    width: auto;
+    height: auto;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+}
+header > .logo > a{
+    text-decoration: none;
+
+    font-family: var(--fonte_destaque);
+    font-weight: bolder;
+    font-size: 20px;
+    color:var(--cor0);
+}
+header > .reiniciar{
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 5px;
+    border-color: transparent;
+    
+    background-color: transparent;
+}
+.reiniciar > input{
+    padding: 3px;
+
+    font-family: var(--fonte_padrao);
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--cor0);
+
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 5px;
+    border-color: transparent;
+    
+    cursor: pointer;
+    
+    background-color: transparent;
+
+    transition: all .3s ease-in-out;
+}
+.reiniciar > input:hover{
+    border-color: var(--cor0);
+    
+    background-color: #f2f2f27a;
+    box-shadow: 0px 0px 3px var(--cor0);
+}
+
+
+main{
+    width: 100%;
+    /*5% do html e body são para o header e os outros 5 sao para o footer*/
+    height: 95%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color:var(--cor3);
+}
+main > .conteiner_dados{
+    width: 90%;
+    /*ocupa 100% da altura do conteiner pai*/
+    height: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    gap: 5px;
+
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-color: var(--cor0);
+
+    background-color: var(--cor0);
+
+    overflow: hidden;
+}
+.conteiner_dados > h2{
+    width: auto;
+    height: 5%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--fonte_destaque);
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--cor3);
+    
+    padding: 10px;
+
+    background-color: transparent;
+}
+.conteiner_dados > .conteiner_tribos{
+    width: 100%;
+    height: 90%;
+
+    /*configurando o scrol lateral quando necessário*/
+    overflow: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    /*os flex-itens empacotados será esticados*/
+    align-content: stretch;
+    
+    padding: 5px 0px;
+    
+    gap: 10px;
+
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-color: transparent;
+
+    background-color: transparent;
+}
+.conteiner_tribos > .tribo{
+    flex-basis: 140px;
+    height: auto;
+
+    padding: 5px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    cursor: pointer;
+
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: transparent;
+
+    transition: all .3s ease-in-out;
+}
+.tribo > h3{
+    font-family: var(--fonte_destaque);
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+
+    background-color: transparent;
+}
+.tribo > .conteiner_imagem{
+    width: 90px;
+    height: 90px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+}
+.tribo > .conteiner_imagem > img{
+    width: 100%;
+    height: 100%;
+}
+.tribo > .pontuacao{
+    width: 75%;
+    height: auto;
+    
+    font-family: var(--fonte_padrao);
+    font-size: 16px;
+    text-align: center;
+
+    padding-top: 6px;
+    padding-bottom: 3px;
+
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 20px;
+    border-color: transparent;
+    
+    color: var(--cor3);
+    background-color: transparent;
+    box-shadow: 0px 0px 3px var(--cor3);
+}
+/*mudanca de estado para o usuário perceber qual o elemento que ele esta iteragindo com o mouse*/
+.tribo:hover{
+    transform: scale3D(1.1, 1.1, 1.1);    
+    
+}
+
+footer{
+    width: 100%;
+    height: 30px;
+
+    margin-top: 10px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--fonte_destaque);
+    font-weight: bolder;
+    font-size: 11px;
+    color: var(--cor0);
+    
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+}
