@@ -84,13 +84,105 @@
 
 /* media para desktops */
 @media screen and (min-width:1280px){
+    
+    .conteiner_nacao > .nacao{
+        flex-basis: 140px;
+        height: 140px;
+    }
+    .nacao > .conteiner_imagem{    
+        width: 100px;
+        height: 100px;
+
+        background-color: transparent;
+    }
+  
+    
     .conteiner_dados > .conteiner_tribos{
-        gap: 25px;
+        gap: 10%;
     }
     .conteiner_tribos > .tribo{
         flex-basis: 160px;
+        height: auto;
+
+        padding: 5px;
+
+        background-color: transparent;
+    }
+    .tribo > h3{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .barra_progresso > .conteiner_imagem{
+        /*posicionando a imagem com base no eixo Y*/
+        top: -12px;
+
+        width: 45px;
+        height: 45px;
+    
+        background-color: transparent;
+    }
+    .tribo > .pontuacao{
+        width: 50%;
+        height: auto;
+        
+        padding-top: 7px;
+        padding-bottom: 4px;
     }
 }
+
+/* media para desktops */
+@media screen and (min-width:1900px){
+    
+    .conteiner_nacao > .nacao{
+        flex-basis: 200px;
+        height: 200px;
+    }
+    .nacao > .conteiner_imagem{    
+        width: 120px;
+        height: 120px;
+
+        background-color: transparent;
+    }
+  
+    
+    .conteiner_dados > .conteiner_tribos{
+        gap: 13%;
+    }
+    .conteiner_tribos > .tribo{
+        flex-basis: 230px;
+        height: auto;
+
+        padding:10px;
+
+        background-color: transparent;
+    }
+    .tribo > h3{
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .tribo > .progresso{
+        height: 25px;
+    }
+    .barra_progresso > .conteiner_imagem{
+        /*posicionando a imagem com base no eixo Y*/
+        top: -17px;
+
+        width: 55px;
+        height: 55px;
+    
+        background-color: transparent;
+    }
+    .tribo > .pontuacao{
+        width: 50%;
+        height: auto;
+        
+        padding-top: 10px;
+        padding-bottom: 4px;
+    }
+    
+}
+
 
 /* media queries para orientação 'Paisagem' */
 @media screen and (orientation: landscape) and (max-width:1024px){
