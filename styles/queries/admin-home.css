@@ -85,6 +85,8 @@
         /*houve um aumento de 10% no padding desse elemento*/
         padding: 20px;
     }
+
+
     .conteiner_dados > .conteiner_tribos{  
         height: 85%;
 
@@ -99,6 +101,42 @@
 
         background-color: transparent;
     }
+
+}
+
+/* media para televisoes */
+@media screen and (min-width:1900px){
+    .conteiner_dados > h2{
+        height: 9%;
+        font-size: 25px;
+        background-color: transparent;
+    }
+    .conteiner_dados > .conteiner_tribos{  
+        height: 90%;
+        /*houve uma diminuicao, agora 35px no espacamento entre as tribos*/
+        gap: 10%;
+        background-color: transparent;
+    }
+    .conteiner_tribos > .tribo{
+        /*houve um aumento de 10px no flex basis*/
+        flex-basis: 200px;
+        background-color: transparent;
+    }
+    .tribo > h3{
+        font-size: 17px;
+        background-color: transparent;
+    }
+    .tribo > .conteiner_imagem{
+        width: 100px;
+        height: 100px;
+    }
+    .tribo > .pontuacao{
+        width: 75%;
+        height: auto;
+        
+        padding-top: 6px;
+        padding-bottom: 4px;
+    }   
 
 }
 
